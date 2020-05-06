@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TotemSblenders", "TelaSblenders\TotemSblenders.csproj", "{D430C6F3-9DB6-407A-ABA2-932C6A247BEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TotemSblenders", "TotemSblenders\TotemSblenders.csproj", "{D430C6F3-9DB6-407A-ABA2-932C6A247BEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
