@@ -34,7 +34,7 @@ namespace TelaSblenders
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
-            (new Form2()).ShowDialog();
+            (new Login()).ShowDialog();
         }
     }
 }

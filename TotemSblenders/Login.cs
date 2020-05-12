@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using MaterialSkin.Controls;
 namespace TelaSblenders
 {
-    public partial class Form2 : MaterialForm
+    public partial class Login : MaterialForm
     {
-        public Form2()
+        public Login()
         {
             InitializeComponent();
         }

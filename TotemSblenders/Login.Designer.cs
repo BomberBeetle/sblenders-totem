@@ -1,6 +1,6 @@
 ﻿namespace TelaSblenders
 {
-    partial class Form2
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
@@ -68,30 +67,13 @@
             this.materialSingleLineTextField2.TabStop = false;
             this.materialSingleLineTextField2.UseSystemPasswordChar = true;
             // 
-            // materialSingleLineTextField3
-            // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "Cod. Restaurante";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(25, 189);
-            this.materialSingleLineTextField3.MaxLength = 32767;
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(247, 23);
-            this.materialSingleLineTextField3.TabIndex = 2;
-            this.materialSingleLineTextField3.TabStop = false;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
-            // 
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.AutoSize = true;
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(25, 236);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(25, 186);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -105,9 +87,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 300);
+            this.ClientSize = new System.Drawing.Size(300, 250);
             this.Controls.Add(this.materialRaisedButton1);
-            this.Controls.Add(this.materialSingleLineTextField3);
             this.Controls.Add(this.materialSingleLineTextField2);
             this.Controls.Add(this.materialSingleLineTextField1);
             this.Name = "Form2";
@@ -121,7 +102,6 @@
 
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
     }
 }
