@@ -56,6 +56,12 @@
     <Compile Include="AddIngrediente.Designer.cs">
       <DependentUpon>AddIngrediente.cs</DependentUpon>
     </Compile>
+    <Compile Include="CardProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardProduto.Designer.cs">
+      <DependentUpon>CardProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Carrinho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <EmbeddedResource Include="AddIngrediente.resx">
       <DependentUpon>AddIngrediente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CardProduto.resx">
+      <DependentUpon>CardProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Carrinho.resx">
       <DependentUpon>Carrinho.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +155,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
