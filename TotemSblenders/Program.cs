@@ -8,6 +8,8 @@ namespace TelaSblenders
 {
     static class Program
     {
+        public static int userID;
+        public static string userToken;
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
