@@ -45,22 +45,21 @@ namespace TelaSblenders
                
                 if (response.IsSuccessStatusCode)
                 {
-
                     Program.userID = int.Parse((string)resultado["id"]);
                     Program.userToken = (string)resultado["token"];
-                    MessageBox.Show($"sucesso no login;id {Program.userID}; token {Program.userToken}");
+                    //MessageBox.Show($"sucesso no login;id {Program.userID}; token {Program.userToken}");
+                    (new TInicial()).ShowDialog();
                 }
                 else
                 {
                     if ((string)resultado["error"] == "AUTH_ERROR")
                     {
-                        MessageBox.Show("credenciais erradas mermao");
+                        MessageBox.Show("Credenciais incorretas.");
                     }
                 }
 
                 client.Dispose();
             }
-            //(new TInicial()).ShowDialog();
         }
     }
 }

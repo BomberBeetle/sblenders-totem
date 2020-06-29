@@ -97,8 +97,8 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialContextMenuStrip materialContextMenuStrip1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialLabel lblNome;
-        private MaterialSkin.Controls.MaterialLabel lblPreco;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public MaterialSkin.Controls.MaterialLabel lblNome;
+        public MaterialSkin.Controls.MaterialLabel lblPreco;
     }
 }

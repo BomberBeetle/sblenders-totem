@@ -87,6 +87,7 @@
     <Compile Include="Ingredientes.Designer.cs">
       <DependentUpon>Ingredientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProdutoParcial.cs" />
     <Compile Include="Produtos.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -9,11 +9,35 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 using MaterialSkin;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Web.Script.Serialization;
+using SblendersAPI.Models;
 
 namespace TelaSblenders
 {
     public partial class Produtos : MaterialForm
     {
+        int pagina = 1;
+        int paginas = 0;
+        ProdutoParcial[] produtos;
+
+        void showPagina(int pagina)
+        {
+            foreach (CardProduto c in panel1.Controls)
+            {
+                c.Visible = false;
+            }
+            var max = (pagina * 8 > produtos.Length ? produtos.Length - (pagina - 1) * 8:8);
+            for (int i = 0; i < max; i++)
+            {
+                ((CardProduto)panel1.Controls[7 - i]).Visible = true;
+                ((CardProduto)panel1.Controls[7 - i]).lblNome.Text = produtos[(i + 1) * pagina - 1].Name;
+                ((CardProduto)panel1.Controls[7 - i]).lblPreco.Text = "R$" + produtos[(i + 1) * pagina - 1].Cost;
+            }
+        }
+
+
         public Produtos()
         {
             InitializeComponent();
@@ -40,15 +64,43 @@ namespace TelaSblenders
 
         private void Produtos_Load(object sender, EventArgs e)
         {
+            string URL = $"https://localhost:44323/api/Produtos/";
+            string urlParameters = "";
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(URL);
 
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            // List data response.
+            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            ProdutoParcial[] resultado = serializer.Deserialize<List<ProdutoParcial>>(response.Content.ReadAsStringAsync().Result).ToArray();
+
+            if (response.IsSuccessStatusCode)
+            {
+                produtos = resultado;
+                pagina = 1;
+                paginas = (int)Math.Ceiling(produtos.Length / 8d);
+                showPagina(pagina);
+
+            }
+            else
+            {
+                MessageBox.Show("Erro em obter produtos da API. Contate um funcionário.");
+            }
+
+            client.Dispose();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void voltarNaLista_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void avancarNaLista_Click(object sender, EventArgs e)
         {
 
         }

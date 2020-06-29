@@ -35,19 +35,19 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.cardProduto8 = new TelaSblenders.CardProduto();
-            this.cardProduto7 = new TelaSblenders.CardProduto();
-            this.cardProduto6 = new TelaSblenders.CardProduto();
-            this.cardProduto5 = new TelaSblenders.CardProduto();
-            this.cardProduto4 = new TelaSblenders.CardProduto();
-            this.cardProduto3 = new TelaSblenders.CardProduto();
-            this.cardProduto2 = new TelaSblenders.CardProduto();
+            this.voltarNaLista = new System.Windows.Forms.PictureBox();
+            this.avancarNaLista = new System.Windows.Forms.PictureBox();
             this.cardProduto1 = new TelaSblenders.CardProduto();
+            this.cardProduto3 = new TelaSblenders.CardProduto();
+            this.cardProduto4 = new TelaSblenders.CardProduto();
+            this.cardProduto5 = new TelaSblenders.CardProduto();
+            this.cardProduto6 = new TelaSblenders.CardProduto();
+            this.cardProduto7 = new TelaSblenders.CardProduto();
+            this.cardProduto8 = new TelaSblenders.CardProduto();
+            this.cardProduto2 = new TelaSblenders.CardProduto();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voltarNaLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avancarNaLista)).BeginInit();
             this.SuspendLayout();
             // 
             // materialSingleLineTextField1
@@ -121,78 +121,29 @@
             this.panel1.Size = new System.Drawing.Size(1030, 611);
             this.panel1.TabIndex = 4;
             // 
-            // pictureBox1
+            // voltarNaLista
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1116, 150);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.voltarNaLista.BackColor = System.Drawing.Color.LightGray;
+            this.voltarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("voltarNaLista.Image")));
+            this.voltarNaLista.Location = new System.Drawing.Point(1116, 150);
+            this.voltarNaLista.Name = "voltarNaLista";
+            this.voltarNaLista.Size = new System.Drawing.Size(113, 121);
+            this.voltarNaLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.voltarNaLista.TabIndex = 5;
+            this.voltarNaLista.TabStop = false;
+            this.voltarNaLista.Click += new System.EventHandler(this.voltarNaLista_Click);
             // 
-            // pictureBox2
+            // avancarNaLista
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1116, 462);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(113, 121);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // cardProduto8
-            // 
-            this.cardProduto8.Location = new System.Drawing.Point(777, 309);
-            this.cardProduto8.Name = "cardProduto8";
-            this.cardProduto8.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto8.TabIndex = 7;
-            // 
-            // cardProduto7
-            // 
-            this.cardProduto7.Location = new System.Drawing.Point(520, 309);
-            this.cardProduto7.Name = "cardProduto7";
-            this.cardProduto7.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto7.TabIndex = 6;
-            // 
-            // cardProduto6
-            // 
-            this.cardProduto6.Location = new System.Drawing.Point(261, 309);
-            this.cardProduto6.Name = "cardProduto6";
-            this.cardProduto6.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto6.TabIndex = 5;
-            // 
-            // cardProduto5
-            // 
-            this.cardProduto5.Location = new System.Drawing.Point(779, -1);
-            this.cardProduto5.Name = "cardProduto5";
-            this.cardProduto5.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto5.TabIndex = 4;
-            // 
-            // cardProduto4
-            // 
-            this.cardProduto4.Location = new System.Drawing.Point(520, 0);
-            this.cardProduto4.Name = "cardProduto4";
-            this.cardProduto4.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto4.TabIndex = 3;
-            // 
-            // cardProduto3
-            // 
-            this.cardProduto3.Location = new System.Drawing.Point(261, 0);
-            this.cardProduto3.Name = "cardProduto3";
-            this.cardProduto3.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto3.TabIndex = 2;
-            // 
-            // cardProduto2
-            // 
-            this.cardProduto2.Location = new System.Drawing.Point(0, 308);
-            this.cardProduto2.Name = "cardProduto2";
-            this.cardProduto2.Size = new System.Drawing.Size(255, 293);
-            this.cardProduto2.TabIndex = 1;
+            this.avancarNaLista.BackColor = System.Drawing.Color.LightGray;
+            this.avancarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("avancarNaLista.Image")));
+            this.avancarNaLista.Location = new System.Drawing.Point(1116, 462);
+            this.avancarNaLista.Name = "avancarNaLista";
+            this.avancarNaLista.Size = new System.Drawing.Size(113, 121);
+            this.avancarNaLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avancarNaLista.TabIndex = 6;
+            this.avancarNaLista.TabStop = false;
+            this.avancarNaLista.Click += new System.EventHandler(this.avancarNaLista_Click);
             // 
             // cardProduto1
             // 
@@ -201,14 +152,63 @@
             this.cardProduto1.Size = new System.Drawing.Size(255, 293);
             this.cardProduto1.TabIndex = 0;
             // 
+            // cardProduto3
+            // 
+            this.cardProduto3.Location = new System.Drawing.Point(261, 0);
+            this.cardProduto3.Name = "cardProduto3";
+            this.cardProduto3.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto3.TabIndex = 2;
+            // 
+            // cardProduto4
+            // 
+            this.cardProduto4.Location = new System.Drawing.Point(520, 0);
+            this.cardProduto4.Name = "cardProduto4";
+            this.cardProduto4.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto4.TabIndex = 3;
+            // 
+            // cardProduto5
+            // 
+            this.cardProduto5.Location = new System.Drawing.Point(779, -1);
+            this.cardProduto5.Name = "cardProduto5";
+            this.cardProduto5.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto5.TabIndex = 4;
+            // 
+            // cardProduto6
+            // 
+            this.cardProduto6.Location = new System.Drawing.Point(261, 309);
+            this.cardProduto6.Name = "cardProduto6";
+            this.cardProduto6.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto6.TabIndex = 5;
+            // 
+            // cardProduto7
+            // 
+            this.cardProduto7.Location = new System.Drawing.Point(520, 309);
+            this.cardProduto7.Name = "cardProduto7";
+            this.cardProduto7.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto7.TabIndex = 6;
+            // 
+            // cardProduto8
+            // 
+            this.cardProduto8.Location = new System.Drawing.Point(777, 309);
+            this.cardProduto8.Name = "cardProduto8";
+            this.cardProduto8.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto8.TabIndex = 7;
+            // 
+            // cardProduto2
+            // 
+            this.cardProduto2.Location = new System.Drawing.Point(0, 308);
+            this.cardProduto2.Name = "cardProduto2";
+            this.cardProduto2.Size = new System.Drawing.Size(255, 293);
+            this.cardProduto2.TabIndex = 1;
+            // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.avancarNaLista);
+            this.Controls.Add(this.voltarNaLista);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton1);
@@ -218,8 +218,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Produtos_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voltarNaLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avancarNaLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,15 +232,15 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private System.Windows.Forms.Panel panel1;
-        private CardProduto cardProduto2;
-        private CardProduto cardProduto1;
+        private System.Windows.Forms.PictureBox voltarNaLista;
+        private System.Windows.Forms.PictureBox avancarNaLista;
         private CardProduto cardProduto8;
         private CardProduto cardProduto7;
         private CardProduto cardProduto6;
         private CardProduto cardProduto5;
         private CardProduto cardProduto4;
         private CardProduto cardProduto3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private CardProduto cardProduto2;
+        private CardProduto cardProduto1;
     }
 }
