@@ -31,6 +31,17 @@ namespace TelaSblenders
             var max = (pagina * 8 > produtos.Length ? produtos.Length - (pagina - 1) * 8:8);
             for (int i = 0; i < max; i++)
             {
+                ((CardProduto)panel1.Controls[7 - i]).Click += new System.EventHandler((object sender, EventArgs e) =>
+                {
+                    (new Ingredientes(produtos[i * pagina - 1])).ShowDialog();
+                });
+
+                foreach (Control c in panel1.Controls[7 - i].Controls) {
+                    c.Click += new System.EventHandler((object sender, EventArgs e) =>
+                    {
+                        (new Ingredientes(produtos[i * pagina - 1])).ShowDialog();
+                    });
+                }
                 ((CardProduto)panel1.Controls[7 - i]).Visible = true;
                 ((CardProduto)panel1.Controls[7 - i]).lblNome.Text = produtos[(i + 1) * pagina - 1].Name;
                 ((CardProduto)panel1.Controls[7 - i]).lblPreco.Text = "R$" + produtos[(i + 1) * pagina - 1].Cost;
@@ -45,16 +56,6 @@ namespace TelaSblenders
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange800, Primary.Orange900, Primary.Orange500, Accent.DeepOrange200, TextShade.WHITE);
-        }
-
-        private void materialListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void materialListView1_Click(object sender, EventArgs e)
-        {
-            (new Ingredientes()).ShowDialog();
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)

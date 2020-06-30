@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Carne Extra",
             "R$ 5,00",
             "0"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sauce?",
             "R$ 5,00",
             "0"}, -1);
@@ -47,8 +47,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colunaPreco = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colunaQuantidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialListView2 = new MaterialSkin.Controls.MaterialListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,6 +56,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.ColunaDescricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -195,21 +196,22 @@
             this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Item,
-            this.columnHeader1,
-            this.columnHeader2});
+            this.colunaPreco,
+            this.colunaQuantidade,
+            this.ColunaDescricao});
             this.materialListView1.Depth = 0;
             this.materialListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.materialListView1.HideSelection = false;
             this.materialListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
-            this.materialListView1.Location = new System.Drawing.Point(6, 24);
+            listViewItem1});
+            this.materialListView1.Location = new System.Drawing.Point(-4, 22);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialListView1.Name = "materialListView1";
             this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(1198, 390);
+            this.materialListView1.Size = new System.Drawing.Size(1220, 390);
             this.materialListView1.TabIndex = 0;
             this.materialListView1.UseCompatibleStateImageBehavior = false;
             this.materialListView1.View = System.Windows.Forms.View.Details;
@@ -218,17 +220,19 @@
             // Item
             // 
             this.Item.Text = "Item";
-            this.Item.Width = 800;
+            this.Item.Width = 550;
             // 
-            // columnHeader1
+            // colunaPreco
             // 
-            this.columnHeader1.Text = "Preço ";
-            this.columnHeader1.Width = 200;
+            this.colunaPreco.Text = "Preço ";
+            this.colunaPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colunaPreco.Width = 185;
             // 
-            // columnHeader2
+            // colunaQuantidade
             // 
-            this.columnHeader2.Text = "Quantidade";
-            this.columnHeader2.Width = 200;
+            this.colunaQuantidade.Text = "Quantidade";
+            this.colunaQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colunaQuantidade.Width = 185;
             // 
             // tabPage2
             // 
@@ -236,7 +240,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1192, 431);
+            this.tabPage2.Size = new System.Drawing.Size(1223, 431);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Molhos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -254,7 +258,7 @@
             this.materialListView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.materialListView2.HideSelection = false;
             this.materialListView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem2});
             this.materialListView2.Location = new System.Drawing.Point(11, 29);
             this.materialListView2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialListView2.MouseState = MaterialSkin.MouseState.OUT;
@@ -309,6 +313,12 @@
             this.materialSingleLineTextField1.TabStop = false;
             this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
+            // ColunaDescricao
+            // 
+            this.ColunaDescricao.Text = "Descrição";
+            this.ColunaDescricao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ColunaDescricao.Width = 300;
+            // 
             // Ingredientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,12 +361,13 @@
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
         private MaterialSkin.Controls.MaterialListView materialListView1;
         private System.Windows.Forms.ColumnHeader Item;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader colunaPreco;
+        private System.Windows.Forms.ColumnHeader colunaQuantidade;
         private MaterialSkin.Controls.MaterialListView materialListView2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private System.Windows.Forms.ColumnHeader ColunaDescricao;
     }
 }

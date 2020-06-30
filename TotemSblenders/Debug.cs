@@ -29,7 +29,7 @@ namespace TelaSblenders
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-            (new Ingredientes()).ShowDialog();
+            (new Ingredientes(new SblendersAPI.Models.ProdutoParcial())).ShowDialog();
         }
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
