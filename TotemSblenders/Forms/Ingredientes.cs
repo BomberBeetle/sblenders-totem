@@ -17,7 +17,18 @@ namespace TelaSblenders
     public partial class Ingredientes : MaterialForm
     {
         Produto produto;
+        PedidoProduto pedido;
 
+        public void ComputePrice()
+        {
+            decimal price = produto.Cost;
+            foreach(PedidoProdutoIngrediente ppi in pedido.ingredientes)
+            {
+                price += Array.Find(produto.ingredientes, i => i.PIngredientID == ppi.ProdutoIngredienteID).Price *ppi.Quantidade;
+            }
+            price *= pedido.pedidoProdutoQtde;
+            materialLabel3.Text = "R$ " + price;
+        }
         public string getCategoriaNome(int id)
         {
             string URL = $"https://localhost:44323/api/CategoriaIngrediente/{id}";
@@ -49,8 +60,8 @@ namespace TelaSblenders
         public Ingredientes(ProdutoParcial p)
         {
             InitializeComponent();
-            
 
+            pedido = new PedidoProduto(1, p.ID, new PedidoProdutoIngrediente[0]);
             string URL = $"https://localhost:44323/api/Produtos/{p.ID}";
             string urlParameters = "";
             HttpClient client = new HttpClient();
@@ -75,7 +86,7 @@ namespace TelaSblenders
                     if (categorias.Contains(pI.CategoriaIngredienteID))
                     {
                         string[] rowStrings = { pI.Name, "R$ " + pI.Price, pI.DefaultQuantity.ToString(), pI.Desc };
-                        ListViewItem row = new ListViewItem(rowStrings);
+                        ListViewItem row = new ListViewItem(rowStrings);                     
                         ((MaterialListView)materialTabControl1.Controls[categorias.IndexOf(pI.CategoriaIngredienteID)].Controls[0]).Items.Add(row);
                     }
                     else
@@ -98,13 +109,46 @@ namespace TelaSblenders
                         l.Columns.AddRange(new ColumnHeader[] { nameHeader, costHeader, qHeader, descHeader});
                         l.HeaderStyle = ColumnHeaderStyle.Nonclickable;
                         TabPage categoriaPage = new TabPage();
-                        categoriaPage.BackColor = Color.Red;
                         categoriaPage.Text = getCategoriaNome(pI.CategoriaIngredienteID); //transformar issso em uma chamada de API pra pegar o nome dps
-                        categoriaPage.Controls.Add(l);                    
+                        categoriaPage.Controls.Add(l);
+                        if(pI.DefaultQuantity != 0)
+                        {
+                            List<PedidoProdutoIngrediente> ppis = new List<PedidoProdutoIngrediente>(pedido.ingredientes);
+                            ppis.Add(new PedidoProdutoIngrediente(pI.IngredientID, pI.DefaultQuantity));
+                            pedido.ingredientes = ppis.ToArray();
+                        }
                         string[] rowStrings = { pI.Name, "R$ " + pI.Price, pI.DefaultQuantity.ToString(), pI.Desc };
                         ListViewItem row = new ListViewItem(rowStrings);
                         l.Items.Add(row);
                         materialTabControl1.TabPages.Add(categoriaPage);
+                        l.SelectedIndexChanged += new System.EventHandler((object o, EventArgs e)=> {
+                            if(l.SelectedIndices.Count == 0)
+                            {
+                                return;
+                            }
+                            ProdutoIngrediente[] ingredientes = (from ingrediente in produto.ingredientes where ingrediente.CategoriaIngredienteID == categorias[materialTabControl1.SelectedIndex] select ingrediente).ToArray();
+                            ProdutoIngrediente selectedIngredient = ingredientes[l.SelectedIndices[0]];
+                            int index = Array.FindIndex(pedido.ingredientes, ing => ing.ProdutoIngredienteID == selectedIngredient.PIngredientID);
+                            if(index != -1)
+                            {
+                                AddIngrediente query = new AddIngrediente(pedido.ingredientes[index].Quantidade);
+                                query.ShowDialog();
+                                pedido.ingredientes[index].Quantidade = query.Quantidade;
+                                ComputePrice();
+                                l.Items[l.SelectedIndices[0]].SubItems[2].Text = query.Quantidade.ToString();
+                            }
+                            else
+                            {
+                                List<PedidoProdutoIngrediente> ppis = new List<PedidoProdutoIngrediente>(pedido.ingredientes);
+                                ppis.Add(new PedidoProdutoIngrediente(selectedIngredient.IngredientID, selectedIngredient.DefaultQuantity));
+                                pedido.ingredientes = ppis.ToArray();
+                                AddIngrediente query = new AddIngrediente(pedido.ingredientes[pedido.ingredientes.Length -1].Quantidade);
+                                query.ShowDialog();
+                                pedido.ingredientes[pedido.ingredientes.Length - 1].Quantidade = query.Quantidade;
+                                ComputePrice();
+                                l.Items[l.SelectedIndices[0]].SubItems[2].Text = pedido.ingredientes[pedido.ingredientes.Length - 1].Quantidade.ToString();
+                            }
+                        });
                         hasPages = true;
                     }
                     if (hasPages)
@@ -113,6 +157,7 @@ namespace TelaSblenders
                         materialTabSelector1.Invalidate();
                         materialTabSelector1.Update();
                     }
+                    ComputePrice();
                 }
             }
             else
@@ -157,11 +202,14 @@ namespace TelaSblenders
 
         private void materialListView1_Click(object sender, EventArgs e)
         {
-            (new AddIngrediente()).ShowDialog();
+            
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            List<PedidoProduto> ppl = new List<PedidoProduto>(Program.Carrinho.produtos);
+            ppl.Add(pedido);
+            Program.Carrinho.produtos = ppl.ToArray();
             Close();
         }
 
@@ -173,6 +221,23 @@ namespace TelaSblenders
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            if(pedido.pedidoProdutoQtde > 1)
+            {
+                pedido.pedidoProdutoQtde--;
+                materialLabel1.Text = pedido.pedidoProdutoQtde.ToString();
+                ComputePrice();
+            }
+        }
+
+        private void materialRaisedButton3_Click(object sender, EventArgs e)
+        {
+            pedido.pedidoProdutoQtde++;
+            materialLabel1.Text = pedido.pedidoProdutoQtde.ToString();
+            ComputePrice();
         }
     }
 }

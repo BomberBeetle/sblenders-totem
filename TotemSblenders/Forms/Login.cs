@@ -17,6 +17,40 @@ namespace TelaSblenders
 {
     public partial class Login : MaterialForm
     {
+        private bool GetUserDetails()
+        {
+            string URL = $"https://localhost:44323/api/Agente/{Program.userID}";
+            string urlParameters = "";
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(URL);
+
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Program.userToken);
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            // List data response.
+            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+
+            if (response.IsSuccessStatusCode)
+            {
+                if (resultado.ContainsKey("restaurant_id"))
+                {
+                    Program.userRID = int.Parse((string)resultado["restaurant_id"]);
+                    return true;
+                }
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+
+            client.Dispose();
+        }
+
         public Login()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -52,8 +86,15 @@ namespace TelaSblenders
                 {
                     Program.userID = int.Parse((string)resultado["id"]);
                     Program.userToken = (string)resultado["token"];
-                    //MessageBox.Show($"sucesso no login;id {Program.userID}; token {Program.userToken}");
-                    (new TInicial()).ShowDialog();
+                    if (GetUserDetails())
+                    {
+                        (new TInicial()).ShowDialog();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Credenciais incorretas.");
+                    }
                 }
                 else
                 {

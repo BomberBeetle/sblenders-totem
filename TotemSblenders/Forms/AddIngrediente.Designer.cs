@@ -76,6 +76,7 @@
             this.materialRaisedButton3.TabIndex = 9;
             this.materialRaisedButton3.Text = "+";
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
             // materialRaisedButton2
             // 
@@ -91,6 +92,7 @@
             this.materialRaisedButton2.TabIndex = 8;
             this.materialRaisedButton2.Text = "-";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
             // materialRaisedButton1
             // 

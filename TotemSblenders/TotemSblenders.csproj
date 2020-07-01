@@ -51,10 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddIngrediente.cs">
+    <Compile Include="Forms\AddIngrediente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddIngrediente.Designer.cs">
+    <Compile Include="Forms\AddIngrediente.Designer.cs">
       <DependentUpon>AddIngrediente.cs</DependentUpon>
     </Compile>
     <Compile Include="CardProduto.cs">
@@ -63,10 +63,10 @@
     <Compile Include="CardProduto.Designer.cs">
       <DependentUpon>CardProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Carrinho.cs">
+    <Compile Include="Forms\Carrinho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Carrinho.Designer.cs">
+    <Compile Include="Forms\Carrinho.Designer.cs">
       <DependentUpon>Carrinho.cs</DependentUpon>
     </Compile>
     <Compile Include="Debug.cs">
@@ -75,60 +75,63 @@
     <Compile Include="Debug.Designer.cs">
       <DependentUpon>Debug.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ingredientes.cs">
+    <Compile Include="Forms\Ingredientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ingredientes.Designer.cs">
+    <Compile Include="Forms\Ingredientes.Designer.cs">
       <DependentUpon>Ingredientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Produto.cs" />
-    <Compile Include="ProdutoIngrediente.cs" />
-    <Compile Include="ProdutoParcial.cs" />
-    <Compile Include="Produtos.cs">
+    <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\PedidoProduto.cs" />
+    <Compile Include="Models\PedidoProdutoIngrediente.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\ProdutoIngrediente.cs" />
+    <Compile Include="Models\ProdutoParcial.cs" />
+    <Compile Include="Forms\Produtos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Produtos.Designer.cs">
+    <Compile Include="Forms\Produtos.Designer.cs">
       <DependentUpon>Produtos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaFinal.cs">
+    <Compile Include="Forms\TelaFinal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaFinal.Designer.cs">
+    <Compile Include="Forms\TelaFinal.Designer.cs">
       <DependentUpon>TelaFinal.cs</DependentUpon>
     </Compile>
-    <Compile Include="TInicial.cs">
+    <Compile Include="Forms\TInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TInicial.Designer.cs">
+    <Compile Include="Forms\TInicial.Designer.cs">
       <DependentUpon>TInicial.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddIngrediente.resx">
+    <EmbeddedResource Include="Forms\AddIngrediente.resx">
       <DependentUpon>AddIngrediente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CardProduto.resx">
       <DependentUpon>CardProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Carrinho.resx">
+    <EmbeddedResource Include="Forms\Carrinho.resx">
       <DependentUpon>Carrinho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Debug.resx">
       <DependentUpon>Debug.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ingredientes.resx">
+    <EmbeddedResource Include="Forms\Ingredientes.resx">
       <DependentUpon>Ingredientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Produtos.resx">
+    <EmbeddedResource Include="Forms\Produtos.resx">
       <DependentUpon>Produtos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -141,10 +144,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TelaFinal.resx">
+    <EmbeddedResource Include="Forms\TelaFinal.resx">
       <DependentUpon>TelaFinal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TInicial.resx">
+    <EmbeddedResource Include="Forms\TInicial.resx">
       <DependentUpon>TInicial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
