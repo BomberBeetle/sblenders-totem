@@ -20,7 +20,7 @@ namespace TelaSblenders
     {
         int pagina = 1;
         int paginas = 0;
-        ProdutoParcial[] produtos;
+        public  static ProdutoParcial[] produtos;
 
         void ComputeTotal()
         {
@@ -126,6 +126,12 @@ namespace TelaSblenders
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        { Carrinho carrinho = new Carrinho();
+            
+            carrinho.ShowDialog();
         }
     }
 }

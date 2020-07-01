@@ -162,6 +162,7 @@
             this.materialRaisedButton2.TabIndex = 7;
             this.materialRaisedButton2.Text = "Carrinho";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
             // materialLabel1
             // 
