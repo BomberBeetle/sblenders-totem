@@ -35,6 +35,10 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.voltarNaLista = new System.Windows.Forms.PictureBox();
+            this.avancarNaLista = new System.Windows.Forms.PictureBox();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.cardProduto8 = new TelaSblenders.CardProduto();
             this.cardProduto7 = new TelaSblenders.CardProduto();
             this.cardProduto6 = new TelaSblenders.CardProduto();
@@ -43,8 +47,6 @@
             this.cardProduto3 = new TelaSblenders.CardProduto();
             this.cardProduto2 = new TelaSblenders.CardProduto();
             this.cardProduto1 = new TelaSblenders.CardProduto();
-            this.voltarNaLista = new System.Windows.Forms.PictureBox();
-            this.avancarNaLista = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.voltarNaLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avancarNaLista)).BeginInit();
@@ -122,6 +124,58 @@
             this.panel1.Size = new System.Drawing.Size(1030, 611);
             this.panel1.TabIndex = 4;
             // 
+            // voltarNaLista
+            // 
+            this.voltarNaLista.BackColor = System.Drawing.Color.LightGray;
+            this.voltarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("voltarNaLista.Image")));
+            this.voltarNaLista.Location = new System.Drawing.Point(1128, 191);
+            this.voltarNaLista.Name = "voltarNaLista";
+            this.voltarNaLista.Size = new System.Drawing.Size(113, 121);
+            this.voltarNaLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.voltarNaLista.TabIndex = 5;
+            this.voltarNaLista.TabStop = false;
+            this.voltarNaLista.Click += new System.EventHandler(this.voltarNaLista_Click);
+            // 
+            // avancarNaLista
+            // 
+            this.avancarNaLista.BackColor = System.Drawing.Color.LightGray;
+            this.avancarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("avancarNaLista.Image")));
+            this.avancarNaLista.Location = new System.Drawing.Point(1128, 416);
+            this.avancarNaLista.Name = "avancarNaLista";
+            this.avancarNaLista.Size = new System.Drawing.Size(113, 121);
+            this.avancarNaLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avancarNaLista.TabIndex = 6;
+            this.avancarNaLista.TabStop = false;
+            this.avancarNaLista.Click += new System.EventHandler(this.avancarNaLista_Click);
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.AutoSize = true;
+            this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Icon = null;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(1128, 575);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(89, 36);
+            this.materialRaisedButton2.TabIndex = 7;
+            this.materialRaisedButton2.Text = "Carrinho";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(1137, 629);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(80, 18);
+            this.materialLabel1.TabIndex = 8;
+            this.materialLabel1.Text = "Total: R$ 0";
+            // 
             // cardProduto8
             // 
             this.cardProduto8.Location = new System.Drawing.Point(777, 309);
@@ -178,36 +232,14 @@
             this.cardProduto1.Size = new System.Drawing.Size(255, 293);
             this.cardProduto1.TabIndex = 0;
             // 
-            // voltarNaLista
-            // 
-            this.voltarNaLista.BackColor = System.Drawing.Color.LightGray;
-            this.voltarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("voltarNaLista.Image")));
-            this.voltarNaLista.Location = new System.Drawing.Point(1116, 150);
-            this.voltarNaLista.Name = "voltarNaLista";
-            this.voltarNaLista.Size = new System.Drawing.Size(113, 121);
-            this.voltarNaLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.voltarNaLista.TabIndex = 5;
-            this.voltarNaLista.TabStop = false;
-            this.voltarNaLista.Click += new System.EventHandler(this.voltarNaLista_Click);
-            // 
-            // avancarNaLista
-            // 
-            this.avancarNaLista.BackColor = System.Drawing.Color.LightGray;
-            this.avancarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("avancarNaLista.Image")));
-            this.avancarNaLista.Location = new System.Drawing.Point(1116, 462);
-            this.avancarNaLista.Name = "avancarNaLista";
-            this.avancarNaLista.Size = new System.Drawing.Size(113, 121);
-            this.avancarNaLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.avancarNaLista.TabIndex = 6;
-            this.avancarNaLista.TabStop = false;
-            this.avancarNaLista.Click += new System.EventHandler(this.avancarNaLista_Click);
-            // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.ControlBox = false;
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.materialRaisedButton2);
             this.Controls.Add(this.avancarNaLista);
             this.Controls.Add(this.voltarNaLista);
             this.Controls.Add(this.panel1);
@@ -243,5 +275,7 @@
         private CardProduto cardProduto3;
         private CardProduto cardProduto2;
         private CardProduto cardProduto1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

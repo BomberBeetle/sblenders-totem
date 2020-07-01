@@ -10,6 +10,7 @@ namespace SblendersAPI.Models
         public int pedidoProdutoID;
         public int pedidoProdutoQtde;
         public int produtoID;
+        public decimal computatedPrice;
         public PedidoProdutoIngrediente[] ingredientes;
 
         public PedidoProduto(int pedidoProdutoQtde, int produtoID, PedidoProdutoIngrediente[] ingredientes)

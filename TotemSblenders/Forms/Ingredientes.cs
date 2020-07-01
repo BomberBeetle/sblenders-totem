@@ -27,6 +27,7 @@ namespace TelaSblenders
                 price += Array.Find(produto.ingredientes, i => i.PIngredientID == ppi.ProdutoIngredienteID).Price *ppi.Quantidade;
             }
             price *= pedido.pedidoProdutoQtde;
+            pedido.computatedPrice = price;
             materialLabel3.Text = "R$ " + price;
         }
         public string getCategoriaNome(int id)

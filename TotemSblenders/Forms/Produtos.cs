@@ -22,6 +22,17 @@ namespace TelaSblenders
         int paginas = 0;
         ProdutoParcial[] produtos;
 
+        void ComputeTotal()
+        {
+            decimal total = 0;
+            foreach(PedidoProduto pedidoProduto in Program.Carrinho.produtos)
+            {
+                total += pedidoProduto.computatedPrice;
+            }
+            materialLabel1.Text = "Total: R$ " + total;
+            materialRaisedButton2.Text = $"Carrinho ({Program.Carrinho.produtos.Length})";
+        }
+
         void showPagina(int pagina)
         {
             foreach (CardProduto c in panel1.Controls)
@@ -36,6 +47,7 @@ namespace TelaSblenders
                 {
                     Ingredientes form = new Ingredientes(produtos[(indexCopy + 1) * pagina - 1]);
                     form.ShowDialog();
+                    ComputeTotal();
                 });
 
                 foreach (Control c in panel1.Controls[7 - i].Controls) {
@@ -44,6 +56,7 @@ namespace TelaSblenders
 
                         Ingredientes form = new Ingredientes(produtos[(indexCopy + 1) * pagina - 1]);
                        form.ShowDialog();
+                        ComputeTotal();
                     });
                 }
                 ((CardProduto)panel1.Controls[7 - i]).Visible = true;
