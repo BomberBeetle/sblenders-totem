@@ -16,10 +16,7 @@ namespace TelaSblenders
         public Sblendersses()
         {
             InitializeComponent();
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange800, Primary.Orange900, Primary.Orange500, Accent.DeepOrange200, TextShade.WHITE);
+           
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
@@ -35,6 +32,11 @@ namespace TelaSblenders
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
             (new Login()).ShowDialog();
+        }
+
+        private void Sblendersses_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

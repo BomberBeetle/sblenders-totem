@@ -10,6 +10,7 @@ namespace SblendersAPI.Models
         public int DefaultQuantity;
         public int IngredientID;
         public int PIngredientID;
+        public int CategoriaIngredienteID;
         public decimal Price;
         public string Name;
         public string Desc;

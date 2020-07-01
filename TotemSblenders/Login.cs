@@ -11,6 +11,7 @@ using MaterialSkin.Controls;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Script.Serialization;
+using MaterialSkin;
 
 namespace TelaSblenders
 {
@@ -18,6 +19,10 @@ namespace TelaSblenders
     {
         public Login()
         {
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange800, Primary.Orange900, Primary.Orange500, Accent.DeepOrange200, TextShade.WHITE);
             InitializeComponent();
         }
 
@@ -60,6 +65,12 @@ namespace TelaSblenders
 
                 client.Dispose();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            materialSingleLineTextField1.Text = "totem1";
+            materialSingleLineTextField2.Text = "teste";
         }
     }
 }

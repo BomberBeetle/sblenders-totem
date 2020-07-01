@@ -31,15 +31,19 @@ namespace TelaSblenders
             var max = (pagina * 8 > produtos.Length ? produtos.Length - (pagina - 1) * 8:8);
             for (int i = 0; i < max; i++)
             {
+                int indexCopy = i;
                 ((CardProduto)panel1.Controls[7 - i]).Click += new System.EventHandler((object sender, EventArgs e) =>
                 {
-                    (new Ingredientes(produtos[i * pagina - 1])).ShowDialog();
+                    Ingredientes form = new Ingredientes(produtos[(indexCopy + 1) * pagina - 1]);
+                    form.ShowDialog();
                 });
 
                 foreach (Control c in panel1.Controls[7 - i].Controls) {
                     c.Click += new System.EventHandler((object sender, EventArgs e) =>
                     {
-                        (new Ingredientes(produtos[i * pagina - 1])).ShowDialog();
+
+                        Ingredientes form = new Ingredientes(produtos[(indexCopy + 1) * pagina - 1]);
+                       form.ShowDialog();
                     });
                 }
                 ((CardProduto)panel1.Controls[7 - i]).Visible = true;
@@ -104,6 +108,11 @@ namespace TelaSblenders
         private void avancarNaLista_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -95,6 +95,7 @@
             this.Controls.Add(this.materialFlatButton1);
             this.Name = "Sblendersses";
             this.Text = "DEBUG";
+            this.Load += new System.EventHandler(this.Sblendersses_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
