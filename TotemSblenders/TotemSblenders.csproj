@@ -150,6 +150,8 @@
     <EmbeddedResource Include="Forms\TInicial.resx">
       <DependentUpon>TInicial.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Forms\Diagama Forms.cd" />
+    <None Include="Models\Diagrama Models.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
