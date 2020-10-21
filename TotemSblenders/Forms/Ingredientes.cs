@@ -28,7 +28,7 @@ namespace TelaSblenders
             }
             price *= pedido.pedidoProdutoQtde;
             pedido.computatedPrice = price;
-            materialLabel3.Text = "R$ " + price;
+            materialLabel3.Text = "Preço Final: R$ " + price;
         }
         public string getCategoriaNome(int id)
         {

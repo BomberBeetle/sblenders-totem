@@ -45,6 +45,7 @@
             // materialFlatButton1
             // 
             this.materialFlatButton1.AutoSize = true;
+            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
             this.materialFlatButton1.Icon = null;
             this.materialFlatButton1.Location = new System.Drawing.Point(1129, 648);
@@ -111,12 +112,13 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(951, 164);
+            this.materialLabel1.Location = new System.Drawing.Point(951, 157);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(75, 20);
+            this.materialLabel1.Size = new System.Drawing.Size(75, 36);
             this.materialLabel1.TabIndex = 6;
             this.materialLabel1.Text = "1";
+            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
             // materialLabel2
@@ -157,7 +159,7 @@
             this.materialLabel4.Location = new System.Drawing.Point(744, 210);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(314, 411);
+            this.materialLabel4.Size = new System.Drawing.Size(317, 411);
             this.materialLabel4.TabIndex = 12;
             this.materialLabel4.Text = "Descrição: ";
             this.materialLabel4.Click += new System.EventHandler(this.materialLabel4_Click);

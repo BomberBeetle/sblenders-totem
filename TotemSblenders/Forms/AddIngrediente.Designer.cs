@@ -55,12 +55,13 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(330, 96);
+            this.materialLabel1.Location = new System.Drawing.Point(330, 89);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(75, 20);
+            this.materialLabel1.Size = new System.Drawing.Size(75, 36);
             this.materialLabel1.TabIndex = 10;
             this.materialLabel1.Text = "1";
+            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // materialRaisedButton3
             // 
