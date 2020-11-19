@@ -146,9 +146,9 @@
             this.materialLabel3.Location = new System.Drawing.Point(154, 656);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(140, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(92, 19);
             this.materialLabel3.TabIndex = 8;
-            this.materialLabel3.Text = "Preço Final: R$ 7,00";
+            this.materialLabel3.Text = "Preço Final: ";
             this.materialLabel3.Click += new System.EventHandler(this.materialLabel3_Click);
             // 
             // materialLabel4

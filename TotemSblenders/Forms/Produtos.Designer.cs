@@ -35,10 +35,6 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.voltarNaLista = new System.Windows.Forms.PictureBox();
-            this.avancarNaLista = new System.Windows.Forms.PictureBox();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.cardProduto8 = new TelaSblenders.CardProduto();
             this.cardProduto7 = new TelaSblenders.CardProduto();
             this.cardProduto6 = new TelaSblenders.CardProduto();
@@ -47,6 +43,10 @@
             this.cardProduto3 = new TelaSblenders.CardProduto();
             this.cardProduto2 = new TelaSblenders.CardProduto();
             this.cardProduto1 = new TelaSblenders.CardProduto();
+            this.voltarNaLista = new System.Windows.Forms.PictureBox();
+            this.avancarNaLista = new System.Windows.Forms.PictureBox();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.voltarNaLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avancarNaLista)).BeginInit();
@@ -124,6 +124,62 @@
             this.panel1.Size = new System.Drawing.Size(1030, 611);
             this.panel1.TabIndex = 4;
             // 
+            // cardProduto8
+            // 
+            this.cardProduto8.Location = new System.Drawing.Point(777, 309);
+            this.cardProduto8.Name = "cardProduto8";
+            this.cardProduto8.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto8.TabIndex = 7;
+            // 
+            // cardProduto7
+            // 
+            this.cardProduto7.Location = new System.Drawing.Point(520, 309);
+            this.cardProduto7.Name = "cardProduto7";
+            this.cardProduto7.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto7.TabIndex = 6;
+            // 
+            // cardProduto6
+            // 
+            this.cardProduto6.Location = new System.Drawing.Point(261, 309);
+            this.cardProduto6.Name = "cardProduto6";
+            this.cardProduto6.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto6.TabIndex = 5;
+            // 
+            // cardProduto5
+            // 
+            this.cardProduto5.Location = new System.Drawing.Point(3, 309);
+            this.cardProduto5.Name = "cardProduto5";
+            this.cardProduto5.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto5.TabIndex = 4;
+            // 
+            // cardProduto4
+            // 
+            this.cardProduto4.Location = new System.Drawing.Point(777, 0);
+            this.cardProduto4.Name = "cardProduto4";
+            this.cardProduto4.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto4.TabIndex = 3;
+            // 
+            // cardProduto3
+            // 
+            this.cardProduto3.Location = new System.Drawing.Point(520, 0);
+            this.cardProduto3.Name = "cardProduto3";
+            this.cardProduto3.Size = new System.Drawing.Size(253, 303);
+            this.cardProduto3.TabIndex = 2;
+            // 
+            // cardProduto2
+            // 
+            this.cardProduto2.Location = new System.Drawing.Point(261, 0);
+            this.cardProduto2.Name = "cardProduto2";
+            this.cardProduto2.Size = new System.Drawing.Size(255, 293);
+            this.cardProduto2.TabIndex = 1;
+            // 
+            // cardProduto1
+            // 
+            this.cardProduto1.Location = new System.Drawing.Point(0, 0);
+            this.cardProduto1.Name = "cardProduto1";
+            this.cardProduto1.Size = new System.Drawing.Size(255, 293);
+            this.cardProduto1.TabIndex = 0;
+            // 
             // voltarNaLista
             // 
             this.voltarNaLista.BackColor = System.Drawing.Color.LightGray;
@@ -168,70 +224,14 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(1137, 629);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(80, 18);
+            this.materialLabel1.Size = new System.Drawing.Size(81, 19);
             this.materialLabel1.TabIndex = 8;
             this.materialLabel1.Text = "Total: R$ 0";
-            // 
-            // cardProduto8
-            // 
-            this.cardProduto8.Location = new System.Drawing.Point(777, 309);
-            this.cardProduto8.Name = "cardProduto8";
-            this.cardProduto8.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto8.TabIndex = 7;
-            // 
-            // cardProduto7
-            // 
-            this.cardProduto7.Location = new System.Drawing.Point(520, 309);
-            this.cardProduto7.Name = "cardProduto7";
-            this.cardProduto7.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto7.TabIndex = 6;
-            // 
-            // cardProduto6
-            // 
-            this.cardProduto6.Location = new System.Drawing.Point(261, 309);
-            this.cardProduto6.Name = "cardProduto6";
-            this.cardProduto6.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto6.TabIndex = 5;
-            // 
-            // cardProduto5
-            // 
-            this.cardProduto5.Location = new System.Drawing.Point(779, -1);
-            this.cardProduto5.Name = "cardProduto5";
-            this.cardProduto5.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto5.TabIndex = 4;
-            // 
-            // cardProduto4
-            // 
-            this.cardProduto4.Location = new System.Drawing.Point(520, 0);
-            this.cardProduto4.Name = "cardProduto4";
-            this.cardProduto4.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto4.TabIndex = 3;
-            // 
-            // cardProduto3
-            // 
-            this.cardProduto3.Location = new System.Drawing.Point(261, 0);
-            this.cardProduto3.Name = "cardProduto3";
-            this.cardProduto3.Size = new System.Drawing.Size(253, 303);
-            this.cardProduto3.TabIndex = 2;
-            // 
-            // cardProduto2
-            // 
-            this.cardProduto2.Location = new System.Drawing.Point(0, 308);
-            this.cardProduto2.Name = "cardProduto2";
-            this.cardProduto2.Size = new System.Drawing.Size(255, 293);
-            this.cardProduto2.TabIndex = 1;
-            // 
-            // cardProduto1
-            // 
-            this.cardProduto1.Location = new System.Drawing.Point(0, 0);
-            this.cardProduto1.Name = "cardProduto1";
-            this.cardProduto1.Size = new System.Drawing.Size(255, 293);
-            this.cardProduto1.TabIndex = 0;
             // 
             // Produtos
             // 

@@ -38,30 +38,23 @@ namespace TelaSblenders
             foreach (CardProduto c in panel1.Controls)
             {
                 c.Visible = false;
+                Console.WriteLine(c.Name);
             }
             var max = (pagina * 8 > produtos.Length ? produtos.Length - (pagina - 1) * 8:8);
             for (int i = 0; i < max; i++)
             {
                 int indexCopy = i;
-                ((CardProduto)panel1.Controls[7 - i]).Click += new System.EventHandler((object sender, EventArgs e) =>
+                
+                EventHandler clickEvent = new System.EventHandler((object sender, EventArgs e) =>
                 {
-                    Ingredientes form = new Ingredientes(produtos[(indexCopy + 1) * pagina - 1]);
+                    Ingredientes form = new Ingredientes(produtos[(indexCopy) + (pagina - 1) * 8]);
                     form.ShowDialog();
                     ComputeTotal();
                 });
-
-                foreach (Control c in panel1.Controls[7 - i].Controls) {
-                    c.Click += new System.EventHandler((object sender, EventArgs e) =>
-                    {
-
-                        Ingredientes form = new Ingredientes(produtos[(indexCopy + 1) * pagina - 1]);
-                       form.ShowDialog();
-                        ComputeTotal();
-                    });
-                }
+                ((CardProduto)panel1.Controls[7 - i]).SetOnClick(clickEvent);
                 ((CardProduto)panel1.Controls[7 - i]).Visible = true;
-                ((CardProduto)panel1.Controls[7 - i]).lblNome.Text = produtos[(i + 1) * pagina - 1].Name;
-                ((CardProduto)panel1.Controls[7 - i]).lblPreco.Text = "R$" + produtos[(i + 1) * pagina - 1].Cost;
+                ((CardProduto)panel1.Controls[7 - i]).lblNome.Text = produtos[(i) + (pagina - 1)*8].Name;
+                ((CardProduto)panel1.Controls[7 - i]).lblPreco.Text = "R$" + produtos[(i) + (pagina - 1) * 8].Cost;
             }
         }
 
@@ -115,12 +108,20 @@ namespace TelaSblenders
 
         private void voltarNaLista_Click(object sender, EventArgs e)
         {
-
+            if (pagina != 1)
+            {
+                pagina--;
+                showPagina(pagina);
+            }
         }
 
         private void avancarNaLista_Click(object sender, EventArgs e)
         {
-
+            if (pagina != paginas)
+            {
+                pagina++;
+                showPagina(pagina);
+            }
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)

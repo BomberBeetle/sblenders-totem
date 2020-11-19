@@ -157,9 +157,9 @@ namespace TelaSblenders
                         materialTabSelector1.BaseTabControl = materialTabControl1;
                         materialTabSelector1.Invalidate();
                         materialTabSelector1.Update();
-                    }
-                    ComputePrice();
+                    }    
                 }
+                ComputePrice();
             }
             else
             {
