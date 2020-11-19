@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardProduto));
             this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNome = new MaterialSkin.Controls.MaterialLabel();
             this.lblPreco = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,20 +43,10 @@
             this.materialContextMenuStrip1.Name = "materialContextMenuStrip1";
             this.materialContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 225);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblNome
             // 
             this.lblNome.Depth = 0;
-            this.lblNome.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblNome.Location = new System.Drawing.Point(3, 246);
             this.lblNome.MouseState = MaterialSkin.MouseState.HOVER;
@@ -70,7 +59,7 @@
             // lblPreco
             // 
             this.lblPreco.Depth = 0;
-            this.lblPreco.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblPreco.Location = new System.Drawing.Point(-4, 271);
             this.lblPreco.MouseState = MaterialSkin.MouseState.HOVER;
@@ -79,6 +68,17 @@
             this.lblPreco.TabIndex = 5;
             this.lblPreco.Text = "R$";
             this.lblPreco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::TelaSblenders.Properties.Resources.image_error;
+            this.pictureBox1.InitialImage = global::TelaSblenders.Properties.Resources.image_error;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(255, 225);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // CardProduto
             // 

@@ -37,8 +37,8 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@
             this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Icon = null;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(920, 157);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(1081, 102);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -97,7 +97,7 @@
             this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton3.Depth = 0;
             this.materialRaisedButton3.Icon = null;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(1032, 157);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(1193, 102);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
@@ -110,9 +110,9 @@
             // materialLabel1
             // 
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(951, 157);
+            this.materialLabel1.Location = new System.Drawing.Point(1112, 102);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(75, 36);
@@ -126,12 +126,12 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.BackColor = System.Drawing.Color.White;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(747, 166);
+            this.materialLabel2.Location = new System.Drawing.Point(908, 111);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(166, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(165, 18);
             this.materialLabel2.TabIndex = 7;
             this.materialLabel2.Text = "Quantidade do Produto:";
             this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
@@ -141,12 +141,12 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.BackColor = System.Drawing.Color.White;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel3.Location = new System.Drawing.Point(154, 656);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(92, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(91, 18);
             this.materialLabel3.TabIndex = 8;
             this.materialLabel3.Text = "Preço Final: ";
             this.materialLabel3.Click += new System.EventHandler(this.materialLabel3_Click);
@@ -154,12 +154,12 @@
             // materialLabel4
             // 
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(744, 210);
+            this.materialLabel4.Location = new System.Drawing.Point(903, 144);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(317, 411);
+            this.materialLabel4.Size = new System.Drawing.Size(317, 117);
             this.materialLabel4.TabIndex = 12;
             this.materialLabel4.Text = "Descrição: ";
             this.materialLabel4.Click += new System.EventHandler(this.materialLabel4_Click);
@@ -167,34 +167,35 @@
             // materialTabControl1
             // 
             this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(12, 210);
+            this.materialTabControl1.Location = new System.Drawing.Point(12, 144);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(726, 411);
+            this.materialTabControl1.Size = new System.Drawing.Size(885, 477);
             this.materialTabControl1.TabIndex = 13;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TelaSblenders.Properties.Resources.placeholder;
-            this.pictureBox1.Location = new System.Drawing.Point(1086, 199);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 413);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
             // 
             // materialTabSelector1
             // 
             this.materialTabSelector1.BaseTabControl = null;
             this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(12, 152);
+            this.materialTabSelector1.Location = new System.Drawing.Point(12, 86);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(726, 52);
+            this.materialTabSelector1.Size = new System.Drawing.Size(885, 52);
             this.materialTabSelector1.TabIndex = 16;
             this.materialTabSelector1.Text = "materialTabSelector1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.ErrorImage = global::TelaSblenders.Properties.Resources.image_error;
+            this.pictureBox1.InitialImage = global::TelaSblenders.Properties.Resources.image_error;
+            this.pictureBox1.Location = new System.Drawing.Point(903, 264);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(317, 357);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // Ingredientes
             // 

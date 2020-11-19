@@ -24,7 +24,8 @@ namespace TelaSblenders
             decimal price = produto.Cost;
             foreach(PedidoProdutoIngrediente ppi in pedido.ingredientes)
             {
-                price += Array.Find(produto.ingredientes, i => i.PIngredientID == ppi.ProdutoIngredienteID).Price *ppi.Quantidade;
+                ProdutoIngrediente p = Array.Find(produto.ingredientes, i => i.PIngredientID == ppi.ProdutoIngredienteID);
+                price += p.Price *ppi.Quantidade;
             }
             price *= pedido.pedidoProdutoQtde;
             pedido.computatedPrice = price;
@@ -61,7 +62,7 @@ namespace TelaSblenders
         public Ingredientes(ProdutoParcial p)
         {
             InitializeComponent();
-
+            pictureBox1.LoadAsync("https://localhost:44323/api/ProdutoFoto/" + p.ID );
             pedido = new PedidoProduto(1, p.ID, new PedidoProdutoIngrediente[0]);
             string URL = $"https://localhost:44323/api/Produtos/{p.ID}";
             string urlParameters = "";
@@ -89,6 +90,12 @@ namespace TelaSblenders
                         string[] rowStrings = { pI.Name, "R$ " + pI.Price, pI.DefaultQuantity.ToString(), pI.Desc };
                         ListViewItem row = new ListViewItem(rowStrings);                     
                         ((MaterialListView)materialTabControl1.Controls[categorias.IndexOf(pI.CategoriaIngredienteID)].Controls[0]).Items.Add(row);
+                        if (pI.DefaultQuantity != 0)
+                        {
+                            List<PedidoProdutoIngrediente> ppis = new List<PedidoProdutoIngrediente>(pedido.ingredientes);
+                            ppis.Add(new PedidoProdutoIngrediente(pI.IngredientID, pI.DefaultQuantity));
+                            pedido.ingredientes = ppis.ToArray();
+                        }
                     }
                     else
                     {
@@ -97,13 +104,13 @@ namespace TelaSblenders
                         l.Dock = DockStyle.Fill;
                         ColumnHeader nameHeader = new ColumnHeader();
                         nameHeader.Text = "Ingrediente";
-                        nameHeader.Width = 180;
+                        nameHeader.Width = 300;
                         ColumnHeader costHeader = new ColumnHeader();
                         costHeader.Text = "Custo";
                         costHeader.Width = 140;
                         ColumnHeader descHeader = new ColumnHeader();
                         descHeader.Text = "Descrição";
-                        descHeader.Width = 300;
+                        descHeader.Width = 400;
                         ColumnHeader qHeader = new ColumnHeader();
                         qHeader.Text = "Quantidade";
                         qHeader.Width = 100;

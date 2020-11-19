@@ -55,6 +55,7 @@ namespace TelaSblenders
                 ((CardProduto)panel1.Controls[7 - i]).Visible = true;
                 ((CardProduto)panel1.Controls[7 - i]).lblNome.Text = produtos[(i) + (pagina - 1)*8].Name;
                 ((CardProduto)panel1.Controls[7 - i]).lblPreco.Text = "R$" + produtos[(i) + (pagina - 1) * 8].Cost;
+                ((CardProduto)panel1.Controls[7 - i]).pictureBox1.LoadAsync("https://localhost:44323/api/ProdutoFoto/" + produtos[(i) + (pagina - 1) * 8].ID);
             }
         }
 
