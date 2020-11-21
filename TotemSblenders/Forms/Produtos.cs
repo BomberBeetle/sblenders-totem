@@ -71,7 +71,12 @@ namespace TelaSblenders
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            (new Carrinho()).ShowDialog();
+            Carrinho c = (new Carrinho());
+            c.ShowDialog();
+            if((int)c.Tag ==1)
+            {
+                Close();
+            }
         }
 
         private void Produtos_Load(object sender, EventArgs e)

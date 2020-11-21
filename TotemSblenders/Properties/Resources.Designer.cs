@@ -79,5 +79,15 @@ namespace TelaSblenders.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SblendersLogoV4SemFundo {
+            get {
+                object obj = ResourceManager.GetObject("SblendersLogoV4SemFundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace TelaSblenders
         {
             InitializeComponent();
             ComputePrices();
+            Tag = 0;
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
@@ -41,7 +42,9 @@ namespace TelaSblenders
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            (new TelaFinal()).ShowDialog();
+            (new TelaPgto()).ShowDialog();
+            Tag = 1;
+            Close(); 
         }
     }
 }

@@ -113,6 +113,12 @@
     <Compile Include="Forms\TInicial.Designer.cs">
       <DependentUpon>TInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaPgto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPgto.Designer.cs">
+      <DependentUpon>TelaPgto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AddIngrediente.resx">
       <DependentUpon>AddIngrediente.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +156,9 @@
     <EmbeddedResource Include="Forms\TInicial.resx">
       <DependentUpon>TInicial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelaPgto.resx">
+      <DependentUpon>TelaPgto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Forms\Diagama Forms.cd" />
     <None Include="Models\Diagrama Models.cd" />
     <None Include="packages.config" />
@@ -174,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\image_error.png" />
+    <None Include="Resources\SblendersLogoV4SemFundo.png" />
     <None Include="Resources\image_error1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
