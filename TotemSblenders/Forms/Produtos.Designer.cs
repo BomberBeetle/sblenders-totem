@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Produtos));
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.imagens = new System.Windows.Forms.ImageList(this.components);
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cardProduto8 = new TelaSblenders.CardProduto();
             this.cardProduto7 = new TelaSblenders.CardProduto();
@@ -52,24 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.avancarNaLista)).BeginInit();
             this.SuspendLayout();
             // 
-            // materialSingleLineTextField1
-            // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialSingleLineTextField1.Hint = "Pesquisar Produtos";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(12, 78);
-            this.materialSingleLineTextField1.MaxLength = 32767;
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(1256, 23);
-            this.materialSingleLineTextField1.TabIndex = 0;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
-            // 
             // imagens
             // 
             this.imagens.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imagens.ImageStream")));
@@ -82,32 +62,16 @@
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
             this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(1206, 26);
+            this.materialFlatButton1.Location = new System.Drawing.Point(1135, 26);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(73, 36);
+            this.materialFlatButton1.Size = new System.Drawing.Size(142, 36);
             this.materialFlatButton1.TabIndex = 2;
-            this.materialFlatButton1.Text = "Voltar";
+            this.materialFlatButton1.Text = "Cancelar pedido";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
-            // 
-            // materialRaisedButton1
-            // 
-            this.materialRaisedButton1.AutoSize = true;
-            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(12, 669);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(98, 36);
-            this.materialRaisedButton1.TabIndex = 3;
-            this.materialRaisedButton1.Text = "continuar";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // panel1
             // 
@@ -119,7 +83,7 @@
             this.panel1.Controls.Add(this.cardProduto3);
             this.panel1.Controls.Add(this.cardProduto2);
             this.panel1.Controls.Add(this.cardProduto1);
-            this.panel1.Location = new System.Drawing.Point(12, 107);
+            this.panel1.Location = new System.Drawing.Point(12, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1030, 611);
             this.panel1.TabIndex = 4;
@@ -184,7 +148,7 @@
             // 
             this.voltarNaLista.BackColor = System.Drawing.Color.LightGray;
             this.voltarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("voltarNaLista.Image")));
-            this.voltarNaLista.Location = new System.Drawing.Point(1128, 191);
+            this.voltarNaLista.Location = new System.Drawing.Point(1128, 162);
             this.voltarNaLista.Name = "voltarNaLista";
             this.voltarNaLista.Size = new System.Drawing.Size(113, 121);
             this.voltarNaLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +160,7 @@
             // 
             this.avancarNaLista.BackColor = System.Drawing.Color.LightGray;
             this.avancarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("avancarNaLista.Image")));
-            this.avancarNaLista.Location = new System.Drawing.Point(1128, 416);
+            this.avancarNaLista.Location = new System.Drawing.Point(1128, 387);
             this.avancarNaLista.Name = "avancarNaLista";
             this.avancarNaLista.Size = new System.Drawing.Size(113, 121);
             this.avancarNaLista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,7 +174,7 @@
             this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Icon = null;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(1128, 575);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(1128, 546);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -244,9 +208,7 @@
             this.Controls.Add(this.avancarNaLista);
             this.Controls.Add(this.voltarNaLista);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton1);
-            this.Controls.Add(this.materialSingleLineTextField1);
             this.Name = "Produtos";
             this.Text = "Faça seu pedido";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -260,11 +222,8 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private System.Windows.Forms.ImageList imagens;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox voltarNaLista;
         private System.Windows.Forms.PictureBox avancarNaLista;
