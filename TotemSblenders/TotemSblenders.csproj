@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeletThis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletThis.Designer.cs">
+      <DependentUpon>DeletThis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddIngrediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="TelaPgto.Designer.cs">
       <DependentUpon>TelaPgto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DeletThis.resx">
+      <DependentUpon>DeletThis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddIngrediente.resx">
       <DependentUpon>AddIngrediente.cs</DependentUpon>
     </EmbeddedResource>

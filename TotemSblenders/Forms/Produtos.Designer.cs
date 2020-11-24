@@ -146,7 +146,7 @@
             // 
             // voltarNaLista
             // 
-            this.voltarNaLista.BackColor = System.Drawing.Color.LightGray;
+            this.voltarNaLista.BackColor = System.Drawing.Color.Transparent;
             this.voltarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("voltarNaLista.Image")));
             this.voltarNaLista.Location = new System.Drawing.Point(1128, 162);
             this.voltarNaLista.Name = "voltarNaLista";
@@ -158,7 +158,7 @@
             // 
             // avancarNaLista
             // 
-            this.avancarNaLista.BackColor = System.Drawing.Color.LightGray;
+            this.avancarNaLista.BackColor = System.Drawing.Color.Transparent;
             this.avancarNaLista.Image = ((System.Drawing.Image)(resources.GetObject("avancarNaLista.Image")));
             this.avancarNaLista.Location = new System.Drawing.Point(1128, 387);
             this.avancarNaLista.Name = "avancarNaLista";

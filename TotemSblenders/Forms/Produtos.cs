@@ -77,6 +77,10 @@ namespace TelaSblenders
             {
                 Close();
             }
+            else
+            {
+                ComputeTotal();
+            }
         }
 
         private void Produtos_Load(object sender, EventArgs e)

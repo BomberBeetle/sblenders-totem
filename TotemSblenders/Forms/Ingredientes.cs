@@ -59,6 +59,7 @@ namespace TelaSblenders
 
             client.Dispose();
         }
+        
         public Ingredientes(ProdutoParcial p)
         {
             InitializeComponent();

@@ -101,9 +101,9 @@
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(73, 36);
+            this.materialFlatButton1.Size = new System.Drawing.Size(166, 36);
             this.materialFlatButton1.TabIndex = 2;
-            this.materialFlatButton1.Text = "Voltar";
+            this.materialFlatButton1.Text = "Voltar ao carrinho";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
@@ -144,12 +144,12 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(792, 588);
+            this.materialLabel3.Location = new System.Drawing.Point(906, 556);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(390, 18);
+            this.materialLabel3.Size = new System.Drawing.Size(288, 19);
             this.materialLabel3.TabIndex = 5;
-            this.materialLabel3.Text = "Clique em qualquer um para ver os ingredientes adicionais";
+            this.materialLabel3.Text = "Toque em qualquer produto para remover";
             // 
             // Carrinho
             // 

@@ -17,6 +17,7 @@ namespace TelaSblenders
         void ComputePrices()
         {
             decimal total = 0;
+            listView1.Items.Clear();
             foreach (PedidoProduto pedidoProduto in Program.Carrinho.produtos)
             {
                 ProdutoParcial produto = Array.Find(Produtos.produtos, a => a.ID == pedidoProduto.produtoID);
@@ -33,6 +34,22 @@ namespace TelaSblenders
             InitializeComponent();
             ComputePrices();
             Tag = 0;
+            listView1.SelectedIndexChanged += new EventHandler((object o, EventArgs e) => { 
+                if(listView1.SelectedIndices.Count == 0)
+                {
+                    return;
+                }
+                DeletThis delet = new DeletThis();
+                delet.materialLabel1.Text = "Remover " + listView1.SelectedItems[0].SubItems[0].Text + "?";
+                delet.ShowDialog();
+                if (delet.result)
+                {
+                    var extract = new List<PedidoProduto>(Program.Carrinho.produtos);
+                    extract.RemoveAt(listView1.SelectedIndices[0]);
+                    Program.Carrinho.produtos = extract.ToArray();
+                    ComputePrices();
+                }
+            });
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
